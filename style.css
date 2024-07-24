@@ -1,0 +1,124 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #127490;
+}
+.container{
+  width: 400px;
+  min-height: 30vh;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.container .input_box{
+  width: 100%;
+  min-height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 15px;
+}
+.input_box input{
+  width: 85%;
+  min-height: 40px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  outline: none;
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 5px 9px;
+  font-size: 18px;
+}
+.input_box input:focus{
+  box-shadow: 0 0 5px #055d75;
+}
+.input_box button{
+  width: 90px;
+  min-height: 40px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: none;
+  outline: none;
+  background: #127490;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.input_box button:hover{
+  background: #055d75;
+}
+.country_details{
+  width: 100%;
+  min-height: 30vh;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 20px 15px;
+  flex-wrap: wrap;
+}
+.country_details .img_box{
+  width: 100%;
+  min-height: 20vh;
+  margin: 16px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.country_details .img_box img{
+  width: 180px;
+  height: 100px;
+  box-shadow: 0 0 4px #000;
+  object-fit: cover;
+}
+.country_details .country_detail{
+  width: 100%;
+  min-height: 35vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+.country_detail h4{
+  font-size: 21px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.country_detail h4 span{
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 20px;
+}
+.loader {
+  display: none;
+  width: 50px;
+  padding: 7px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #127490;
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {to{transform: rotate(1turn)}}
